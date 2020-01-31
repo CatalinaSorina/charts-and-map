@@ -26,10 +26,3 @@
   color: #61dafb;
 }
 
-.charts {
-  width: 40vw;
-  height: 40vh;
-  /* display: flex; */
-  background: rgb(216, 133, 133);
-  margin: 1rem;
-}
