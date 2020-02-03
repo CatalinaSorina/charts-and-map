@@ -67,34 +67,34 @@ export const bardata = [
 ];
 
 export const pieData =[{
-    "id": "java",
-    "label": "java",
-    "value": 541,
-    "color": "hsl(75, 70%, 50%)"
-},
-{
-    "id": "go",
-    "label": "go",
-    "value": 422,
-    "color": "hsl(235, 70%, 50%)"
-},
-{
-    "id": "c",
-    "label": "c",
-    "value": 227,
-    "color": "hsl(166, 70%, 50%)"
-},
-{
     "id": "lisp",
     "label": "lisp",
-    "value": 127,
-    "color": "hsl(328, 70%, 50%)"
+    "value": 188,
+    "color": "hsl(25, 70%, 50%)"
 },
 {
-    "id": "haskell",
-    "label": "haskell",
-    "value": 90,
-    "color": "hsl(133, 70%, 50%)"
+    "id": "java",
+    "label": "java",
+    "value": 419,
+    "color": "hsl(353, 70%, 50%)"
+},
+{
+    "id": "css",
+    "label": "css",
+    "value": 578,
+    "color": "hsl(337, 70%, 50%)"
+},
+{
+    "id": "php",
+    "label": "php",
+    "value": 149,
+    "color": "hsl(79, 70%, 50%)"
+},
+{
+    "id": "ruby",
+    "label": "ruby",
+    "value": 373,
+    "color": "hsl(71, 70%, 50%)"
 }]
 
 export const mapData = [

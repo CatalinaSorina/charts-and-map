@@ -10,7 +10,7 @@ const PieChart = () => (
         style={{ background: "red" }}
         chart={[{
             key: "pie1",
-            name: "Pie chart:",
+            name: "Pie chart with inner radius:",
             element: <ResponsivePie
                 data={pieData}
                 width={400}
@@ -21,93 +21,34 @@ const PieChart = () => (
                 padAngle={0.7}
                 cornerRadius={5}
                 colors={{ scheme: 'pastel1' }}
-                borderWidth={2}
+                borderWidth={1}
                 borderColor="#373737"
                 enableRadialLabels={false}
-                radialLabelsSkipAngle={0}
-                radialLabelsTextXOffset={6}
-                radialLabelsTextColor="#252525"
-                radialLabelsLinkOffset={0}
-                radialLabelsLinkDiagonalLength={16}
-                radialLabelsLinkHorizontalLength={2}
-                radialLabelsLinkStrokeWidth={1}
-                radialLabelsLinkColor={{ from: 'color' }}
                 sliceLabel="id"
                 slicesLabelsSkipAngle={7}
                 slicesLabelsTextColor="#2e2e2e"
                 animate={true}
                 motionStiffness={90}
                 motionDamping={15}
-                defs={[
-                    {
-                        id: 'dots',
-                        type: 'patternDots',
-                        background: 'inherit',
-                        color: 'rgba(255, 255, 255, 0.3)',
-                        size: 4,
-                        padding: 1,
-                        stagger: true
+                defs={defs}
+                fill={[{
+                    match: {
+                        id: 'ruby'
                     },
-                    {
-                        id: 'lines',
-                        type: 'patternLines',
-                        background: 'inherit',
-                        color: 'rgba(255, 255, 255, 0.3)',
-                        rotation: -45,
-                        lineWidth: 6,
-                        spacing: 10
-                    }
-                ]}
-                fill={[
-                    {
-                        match: {
-                            id: 'ruby'
-                        },
-                        id: 'dots'
+                    id: 'dots'
+                },
+                {
+                    match: {
+                        id: 'lisp'
                     },
-                    {
-                        match: {
-                            id: 'c'
-                        },
-                        id: 'dots'
+                    id: 'lines'
+                },
+                {
+                    match: {
+                        id: 'css'
                     },
-                    {
-                        match: {
-                            id: 'go'
-                        },
-                        id: 'dots'
-                    },
-                    {
-                        match: {
-                            id: 'python'
-                        },
-                        id: 'dots'
-                    },
-                    {
-                        match: {
-                            id: 'scala'
-                        },
-                        id: 'lines'
-                    },
-                    {
-                        match: {
-                            id: 'lisp'
-                        },
-                        id: 'lines'
-                    },
-                    {
-                        match: {
-                            id: 'elixir'
-                        },
-                        id: 'lines'
-                    },
-                    {
-                        match: {
-                            id: 'javascript'
-                        },
-                        id: 'lines'
-                    }
-                ]}
+                    id: 'lines'
+                }]}
                 legends={[{
                     anchor: 'bottom',
                     direction: 'row',
@@ -130,7 +71,7 @@ const PieChart = () => (
             />
         }, {
             key: "pie1",
-            name: "Pie chart:",
+            name: "Simple pie chart with patterns:",
             element: <ResponsivePie
                 data={pieData}
                 width={300}
@@ -139,115 +80,101 @@ const PieChart = () => (
                 padAngle={0.7}
                 cornerRadius={5}
                 colors={['royalblue', 'lightsteelblue', 'pink', 'salmon', 'tomato']}
-                borderWidth={2}
-                borderColor="#373737"
+                borderWidth={0.5}
+                borderColor={{ theme: 'grid.line.stroke' }}
                 enableRadialLabels={false}
-                radialLabelsSkipAngle={0}
-                radialLabelsTextXOffset={6}
-                radialLabelsTextColor="#252525"
-                radialLabelsLinkOffset={0}
-                radialLabelsLinkDiagonalLength={16}
-                radialLabelsLinkHorizontalLength={2}
-                radialLabelsLinkStrokeWidth={1}
-                radialLabelsLinkColor={{ from: 'color' }}
                 sliceLabel="value"
                 slicesLabelsSkipAngle={7}
                 slicesLabelsTextColor="#2e2e2e"
                 animate={true}
                 motionStiffness={90}
                 motionDamping={15}
-                defs={[
-                    {
-                        id: 'dots',
-                        type: 'patternDots',
-                        background: 'inherit',
-                        color: 'rgba(255, 255, 255, 0.3)',
-                        size: 4,
-                        padding: 1,
-                        stagger: true
+                defs={defs}
+                fill={[{
+                    match: {
+                        id: 'ruby'
                     },
-                    {
-                        id: 'lines',
-                        type: 'patternLines',
-                        background: 'inherit',
-                        color: 'rgba(255, 255, 255, 0.3)',
-                        rotation: -45,
-                        lineWidth: 6,
-                        spacing: 10
-                    }
-                ]}
-                fill={[
-                    {
-                        match: {
-                            id: 'ruby'
-                        },
-                        id: 'dots'
+                    id: 'dots'
+                },
+                {
+                    match: {
+                        id: 'css'
                     },
-                    {
-                        match: {
-                            id: 'c'
-                        },
-                        id: 'dots'
+                    id: 'dots'
+                },
+                {
+                    match: {
+                        id: 'java'
                     },
-                    {
-                        match: {
-                            id: 'go'
-                        },
-                        id: 'dots'
-                    },
-                    {
-                        match: {
-                            id: 'python'
-                        },
-                        id: 'dots'
-                    },
-                    {
-                        match: {
-                            id: 'scala'
-                        },
-                        id: 'lines'
-                    },
-                    {
-                        match: {
-                            id: 'lisp'
-                        },
-                        id: 'lines'
-                    },
-                    {
-                        match: {
-                            id: 'elixir'
-                        },
-                        id: 'lines'
-                    },
-                    {
-                        match: {
-                            id: 'javascript'
-                        },
-                        id: 'lines'
-                    }
-                ]}
-                legends={[
-                    {
-                        anchor: 'bottom',
-                        direction: 'row',
-                        translateY: 60,
-                        itemWidth: 50,
-                        itemHeight: 20,
-                        itemTextColor: '#999',
-                        itemDirection: 'bottom-to-top',
-                        symbolSize: 18,
-                        symbolShape: 'square',
-                        effects: [{
-                            on: 'hover',
-                            style: {
-                                itemTextColor: '#2e2e2e'
-                            }
-                        }]
-                    }
-                ]}
+                    id: 'lines'
+                }]}
+                legends={[{
+                    anchor: 'bottom',
+                    direction: 'row',
+                    translateY: 60,
+                    itemWidth: 50,
+                    itemHeight: 20,
+                    itemTextColor: '#999',
+                    itemDirection: 'bottom-to-top',
+                    symbolSize: 18,
+                    symbolShape: 'square',
+                    effects: [{
+                        on: 'hover',
+                        style: {
+                            itemTextColor: '#2e2e2e'
+                        }
+                    }]
+                }]}
+            />
+        }, {
+            key: "pie1",
+            name: "Pie chart with no legend and radial labels:",
+            element: <ResponsivePie
+                data={pieData}
+                width={500}
+                height={500}
+                margin={{ top: 20, right: 80, bottom: 80, left: 80 }}
+                padAngle={0.7}
+                cornerRadius={5}
+                colors={{ scheme: 'accent' }}
+                borderWidth={2}
+                borderColor={{ from: 'color', modifiers: [['darker', 0.2]] }}
+                radialLabelsSkipAngle={0}
+                radialLabelsTextXOffset={10}
+                radialLabelsTextColor="black"
+                radialLabelsLinkOffset={0}
+                radialLabelsLinkDiagonalLength={15}
+                radialLabelsLinkHorizontalLength={15}
+                radialLabelsLinkStrokeWidth={5}
+                radialLabelsLinkColor={{ from: 'color', modifiers: [] }}
+                sliceLabel="value"
+                slicesLabelsSkipAngle={7}
+                slicesLabelsTextColor="#2e2e2e"
+                animate={true}
+                motionStiffness={90}
+                motionDamping={15}
             />
         }]}
     />
-)
+);
+
+const defs = [{
+    id: 'dots',
+    type: 'patternDots',
+    background: 'inherit',
+    color: 'rgba(255, 255, 255, 0.3)',
+    size: 4,
+    padding: 1,
+    stagger: true
+},
+{
+    id: 'lines',
+    type: 'patternLines',
+    background: 'inherit',
+    color: 'rgba(255, 255, 255, 0.3)',
+    rotation: -45,
+    lineWidth: 6,
+    spacing: 10
+}]
 
 export default PieChart;
