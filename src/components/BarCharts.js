@@ -1,4 +1,4 @@
-import React, { useEffect, useState }  from "react";
+import React, { useEffect, useState } from "react";
 import Charts from "./Charts";
 import { Bar } from '@nivo/bar';
 import { bardata, bardataKeys } from "./data";
@@ -30,7 +30,7 @@ const BarChart = () => {
                     borderColor={{ from: 'color', modifiers: [['darker', 2]] }}
                     borderRadius={2}
                     axisBottom={axisBottom}
-                    axisLeft={axisLeft}
+                    axisLeft={axisLeft} s
                     labelSkipHeight={15}
                     labelTextColor={{ from: 'color', modifiers: [['darker', 2]] }}
                     legends={[legendVertical]}
@@ -80,11 +80,6 @@ const themeHorizontal = {
             line: {
                 stroke: "#555555"
             },
-            text: {
-                fill: "#ffffff"
-            }
-        },
-        legend: {
             text: {
                 fill: "#ffffff"
             }

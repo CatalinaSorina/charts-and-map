@@ -2,8 +2,19 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: rgb(55, 139, 111);
   min-height: 100vh;
+  background-color: #282c34;
+}
+
+.AppCharts {
+  height: 90vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background: rgb(55, 139, 111);
+  z-index: 1;
+  overflow: auto;
 }
 
 ::selection {
@@ -11,7 +22,6 @@
 }
 
 .App-header {
-  background-color: #282c34;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -26,3 +36,25 @@
   color: #61dafb;
 }
 
+/* Scroll width */
+::-webkit-scrollbar {
+  width: 1rem;
+}
+
+/* Scroll holder */
+::-webkit-scrollbar-track {
+  margin: 1rem;
+  box-shadow: inset 0 0 0.1rem rgb(39, 35, 35);
+  border-radius: 1rem;
+}
+
+/* Scroll */
+::-webkit-scrollbar-thumb {
+  background: #282c34;
+  border-radius: 1rem;
+}
+
+/* Scroll on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(37, 110, 82);
+}

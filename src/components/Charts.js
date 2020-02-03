@@ -3,7 +3,7 @@ import "./Charts.css";
 
 const Charts = ({ chartName, chart }) => (
     <div className="charts">
-        <h2>{chartName}</h2>
+        <h2 className="chartTitle">{chartName}</h2>
         <div className="typeChart">
             {chart.map(chartType => (
                 <div key={chartType.key}>
