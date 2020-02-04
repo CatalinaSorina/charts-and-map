@@ -7,7 +7,6 @@ const PieChart = () => (
     <Charts
         key="pie"
         chartName="Pie chart"
-        style={{ background: "red" }}
         chart={[{
             key: "pie1",
             name: "Pie chart with inner radius:",
