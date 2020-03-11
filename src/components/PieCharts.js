@@ -69,7 +69,7 @@ const PieChart = () => (
                 }]}
             />
         }, {
-            key: "pie1",
+            key: "pie2",
             name: "Simple pie chart with patterns:",
             element: <ResponsivePie
                 data={pieData}
@@ -126,7 +126,7 @@ const PieChart = () => (
                 }]}
             />
         }, {
-            key: "pie1",
+            key: "pie3",
             name: "Pie chart with no legend and radial labels:",
             element: <ResponsivePie
                 data={pieData}

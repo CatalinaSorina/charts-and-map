@@ -29,5 +29,5 @@
 }
 
 .chartTitle:hover {
-  width: 20%;
+  background: transparent;
 }
