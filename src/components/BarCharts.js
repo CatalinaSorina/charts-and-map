@@ -1,75 +1,61 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Charts from "./Charts";
 import { Bar } from '@nivo/bar';
 import { bardata, bardataKeys } from "./data";
 
-const BarChart = () => {
-    const [data, setBarData] = useState([]);
-    const [keys, setKeys] = useState([]);
-
-    useEffect(() => {
-        setBarData(bardata);
-        setKeys(bardataKeys);
-    }, [])
-
-    return (
-        <Charts
-            chartName="Bar chart"
-            chart={[{
-                key: "bar1",
-                name: "Bar vertical type:",
-                element: <Bar
-                    data={data}
-                    keys={keys}
-                    width={450}
-                    height={300}
-                    indexBy="country"
-                    margin={{ top: 10, right: 100, bottom: 85, left: 50 }}
-                    colors={['royalblue', 'lightsteelblue', 'pink', 'orange', 'salmon', 'tomato']}
-                    borderWidth={1}
-                    borderColor={{ from: 'color', modifiers: [['darker', 2]] }}
-                    borderRadius={2}
-                    axisBottom={axisBottom}
-                    axisLeft={axisLeft} s
-                    labelSkipHeight={15}
-                    labelTextColor={{ from: 'color', modifiers: [['darker', 2]] }}
-                    legends={[legendVertical]}
-                    animate={true}
-                    motionStiffness={90}
-                    motionDamping={15}
-                />
-            }, {
-                key: "bar2",
-                name: "Bar horizontal type:",
-                element: <Bar
-                    data={bardata}
-                    keys={bardataKeys}
-                    width={500}
-                    height={300}
-                    indexBy="country"
-                    groupMode="stacked"
-                    margin={{ top: 20, right: 100, bottom: 60, left: 50 }}
-                    padding={0.3}
-                    layout="horizontal"
-                    reverse={false}
-                    colors={{ scheme: 'green_blue' }}
-                    borderWidth={0.5}
-                    borderColor={{ from: 'color', modifiers: [['darker', 1.6]] }}
-                    axisBottom={axisBottom}
-                    axisLeft={axisLeft}
-                    labelSkipWidth={12}
-                    labelSkipHeight={12}
-                    labelTextColor={{ from: 'color', modifiers: [['darker', 1.6]] }}
-                    legends={[legendHorizontal]}
-                    animate={true}
-                    motionStiffness={90}
-                    motionDamping={15}
-                    theme={themeHorizontal}
-                />
-            }]}
+const BarChart = () =>
+    <Charts chartName="Bar chart" >
+        <Bar
+            key="bar1"
+            title="Bar vertical type:"
+            data={bardata}
+            keys={bardataKeys}
+            width={450}
+            height={300}
+            indexBy="country"
+            margin={{ top: 10, right: 100, bottom: 85, left: 50 }}
+            colors={['royalblue', 'lightsteelblue', 'pink', 'orange', 'salmon', 'tomato']}
+            borderWidth={1}
+            borderColor={{ from: 'color', modifiers: [['darker', 2]] }}
+            borderRadius={2}
+            axisBottom={axisBottom}
+            axisLeft={axisLeft} s
+            labelSkipHeight={15}
+            labelTextColor={{ from: 'color', modifiers: [['darker', 2]] }}
+            legends={[legendVertical]}
+            animate={true}
+            motionStiffness={90}
+            motionDamping={15}
         />
-    )
-};
+        <Bar
+            key="bar2"
+            title="Bar horizontal type:"
+            data={bardata}
+            keys={bardataKeys}
+            width={500}
+            height={300}
+            indexBy="country"
+            groupMode="stacked"
+            margin={{ top: 20, right: 100, bottom: 60, left: 50 }}
+            padding={0.3}
+            layout="horizontal"
+            reverse={false}
+            colors={{ scheme: 'green_blue' }}
+            borderWidth={0.5}
+            borderColor={{ from: 'color', modifiers: [['darker', 1.6]] }}
+            axisBottom={axisBottom}
+            axisLeft={axisLeft}
+            labelSkipWidth={12}
+            labelSkipHeight={12}
+            labelTextColor={{ from: 'color', modifiers: [['darker', 1.6]] }}
+            legends={[legendHorizontal]}
+            animate={true}
+            motionStiffness={90}
+            motionDamping={15}
+            theme={themeHorizontal}
+        />
+    </Charts>
+
 
 const themeHorizontal = {
     background: "rgba(0,0,0,0.5)",

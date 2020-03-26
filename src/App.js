@@ -7,15 +7,15 @@ import PieCharts from "./components/PieCharts";
 
 function App() {
   return (
-    <div className="App">
+    < div className="App">
       <header className="App-header">Charts and map</header>
-      <div className="AppCharts">
-        <BarCharts />
+      < div className="AppCharts">
         <MapCharts />
         <PieCharts />
+        <BarCharts />
         {/* <HeatMapCharts /> */}
-      </div>
-    </div>
+      </ div>
+    </ div>
   );
 }
 

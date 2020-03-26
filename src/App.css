@@ -12,7 +12,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  background: rgb(55, 139, 111);
+  background: rgb(59, 65, 102);
   z-index: 1;
   overflow: auto;
 }
@@ -22,11 +22,12 @@
 }
 
 .App-header {
-  width: 100%;
+  width: 98%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
+  padding: 0.5% 1%;
   font-size: calc(10px + 2vmin);
   color: white;
   cursor: default;
@@ -56,5 +57,5 @@
 
 /* Scroll on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: rgb(37, 110, 82);
+  background: rgb(59, 65, 102);
 }

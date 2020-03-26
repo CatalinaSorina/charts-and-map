@@ -1,33 +1,37 @@
 .charts {
   text-align: center;
-  background: rgb(240, 155, 155);
+  position: relative;
+  background: rgb(240, 210, 155);
   display: flex;
   align-items: center;
+  flex-direction: column;
   margin: 5rem 0;
-  border: 0.2rem solid rgb(59, 102, 75);
+  border: 0.2rem solid rgb(59, 65, 102);
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  width: 90vw;
-  height: 100%;
+  width: 70%;
   z-index: -1;
 }
 
 .typeChart {
   display: flex;
   justify-content: center;
-  margin: 1rem;
 }
 
 .chartTitle {
-  background: rgb(59, 102, 75);
-  color: white;
-  text-align: right;
-  width: 15%;
-  padding: 0.5rem;
-  margin-right: 2rem;
-  border-radius: 0 1rem 1rem 0;
+  background: rgb(59, 65, 102);
+  color: rgb(240, 210, 155);
+  margin-top: -1rem;
+  padding: 0.1rem 0.5rem;
+  border-radius: 0 0 1rem 1rem;
   cursor: default;
+  position: absolute;
 }
 
 .chartTitle:hover {
-  background: transparent;
+  margin-top: -0.5rem;
+  padding: 1rem;
+}
+
+.chart {
+  margin: 1rem;
 }
