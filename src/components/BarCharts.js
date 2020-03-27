@@ -1,17 +1,15 @@
 import React from "react";
 import Charts from "./Charts";
-import { Bar } from '@nivo/bar';
+import { ResponsiveBar } from '@nivo/bar';
 import { bardata, bardataKeys } from "./data";
 
 const BarChart = () =>
     <Charts chartName="Bar chart" >
-        <Bar
+        <ResponsiveBar
             key="bar1"
             title="Bar vertical type:"
             data={bardata}
             keys={bardataKeys}
-            width={450}
-            height={300}
             indexBy="country"
             margin={{ top: 10, right: 100, bottom: 85, left: 50 }}
             colors={['royalblue', 'lightsteelblue', 'pink', 'orange', 'salmon', 'tomato']}
@@ -24,16 +22,14 @@ const BarChart = () =>
             labelTextColor={{ from: 'color', modifiers: [['darker', 2]] }}
             legends={[legendVertical]}
             animate={true}
-            motionStiffness={90}
-            motionDamping={15}
+            motionStiffness={300}
+            motionDamping={2}
         />
-        <Bar
+        <ResponsiveBar
             key="bar2"
             title="Bar horizontal type:"
             data={bardata}
             keys={bardataKeys}
-            width={500}
-            height={300}
             indexBy="country"
             groupMode="stacked"
             margin={{ top: 20, right: 100, bottom: 60, left: 50 }}
@@ -50,8 +46,8 @@ const BarChart = () =>
             labelTextColor={{ from: 'color', modifiers: [['darker', 1.6]] }}
             legends={[legendHorizontal]}
             animate={true}
-            motionStiffness={90}
-            motionDamping={15}
+            motionStiffness={200}
+            motionDamping={5}
             theme={themeHorizontal}
         />
     </Charts>

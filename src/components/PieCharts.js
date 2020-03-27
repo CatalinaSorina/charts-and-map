@@ -12,8 +12,6 @@ const PieChart = () => (
             key="pie1"
             title="Pie chart with inner radius:"
             data={pieData}
-            width={300}
-            height={300}
             margin={{ top: 0, right: 0, bottom: 80, left: 0 }}
             sortByValue={true}
             innerRadius={0.5}
@@ -26,9 +24,6 @@ const PieChart = () => (
             sliceLabel="id"
             slicesLabelsSkipAngle={7}
             slicesLabelsTextColor="#2e2e2e"
-            animate={true}
-            motionStiffness={90}
-            motionDamping={15}
             defs={defs}
             fill={[{
                 match: {
@@ -70,10 +65,8 @@ const PieChart = () => (
         />
         <ResponsivePie
             title="Pie chart with no legend and radial labels:"
-            key="pie3"
+            key="pie2"
             data={pieData}
-            width={350}
-            height={350}
             margin={{ top: 20, right: 80, bottom: 80, left: 80 }}
             padAngle={0.7}
             cornerRadius={5}
@@ -91,16 +84,11 @@ const PieChart = () => (
             sliceLabel="value"
             slicesLabelsSkipAngle={7}
             slicesLabelsTextColor="#2e2e2e"
-            animate={true}
-            motionStiffness={90}
-            motionDamping={15}
         />
         <ResponsivePie
-            key="pie2"
+            key="pie3"
             title="Simple pie chart with patterns:"
             data={pieData}
-            width={300}
-            height={300}
             margin={{ top: 0, right: 0, bottom: 80, left: 0 }}
             padAngle={0.7}
             cornerRadius={5}
@@ -111,9 +99,6 @@ const PieChart = () => (
             sliceLabel="value"
             slicesLabelsSkipAngle={7}
             slicesLabelsTextColor="#2e2e2e"
-            animate={true}
-            motionStiffness={90}
-            motionDamping={15}
             defs={defs}
             fill={[{
                 match: {

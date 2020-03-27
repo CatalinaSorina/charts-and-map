@@ -25,8 +25,6 @@ const MapChart = () => {
                 key="map1"
                 title="Map with custom colors:"
                 data={mapData1}
-                width={500}
-                height={300}
                 features={features}
                 margin={{ top: 0, right: 0, bottom: 0, left: 0 }}
                 colors={['royalblue', 'lightsteelblue', 'pink', 'salmon', 'tomato', 'blue', 'lightblue', 'red', 'green', 'yellow', 'lightgreen', 'gray', 'white', 'black', 'orange']}
@@ -45,8 +43,6 @@ const MapChart = () => {
                 key="map2"
                 title="Map with theme:"
                 data={mapData2}
-                width={500}
-                height={300}
                 features={features}
                 margin={{ top: 0, right: 150, bottom: 0, left: 0 }}
                 colors="PiYG"

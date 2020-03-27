@@ -34,4 +34,9 @@
 
 .chart {
   margin: 1rem;
+  width: 25rem;
+  height: 20rem;
+  resize: both;
+  padding-bottom: 5rem;
+  overflow: hidden;
 }
