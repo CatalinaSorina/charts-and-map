@@ -8,13 +8,14 @@
   margin: 5rem 0;
   border: 0.2rem solid rgb(59, 65, 102);
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  width: 70%;
+  width: 80%;
   z-index: -1;
 }
 
 .typeChart {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  width: inherit;
 }
 
 .chartTitle {
@@ -34,7 +35,7 @@
 
 .chart {
   margin: 1rem;
-  width: 25rem;
+  width: 28rem;
   height: 20rem;
   resize: both;
   padding-bottom: 5rem;
