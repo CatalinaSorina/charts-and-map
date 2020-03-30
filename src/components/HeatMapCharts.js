@@ -12,8 +12,6 @@ const HeatMapCharts = () => (
             key="heatmap1"
             title="Heat map:"
             data={heatMapData}
-            width={500}
-            height={500}
             keys={[
                 'hot dog',
                 'burger',
@@ -74,8 +72,6 @@ const HeatMapCharts = () => (
             key="heatmap2"
             title="Heat map bottom axis and no legend:"
             data={heatMapData}
-            width={500}
-            height={500}
             keys={[
                 'hot dog',
                 'burger',
@@ -113,6 +109,7 @@ const HeatMapCharts = () => (
                 legendOffset: -40
             }}
             cellShape="circle"
+            sizeVariation={0.5}
             cellOpacity={0.8}
             cellBorderWidth={1}
             cellBorderColor={{ from: 'color', modifiers: [['darker', '1.6']] }}

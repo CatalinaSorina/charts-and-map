@@ -3,7 +3,6 @@ import './App.css';
 import BarCharts from "./components/BarCharts";
 import MapCharts from "./components/MapCharts";
 import PieCharts from "./components/PieCharts";
-// import HeatMapCharts from "./components/HeatMapCharts";
 
 function App() {
   return (
@@ -13,7 +12,6 @@ function App() {
         <MapCharts />
         <PieCharts />
         <BarCharts />
-        {/* <HeatMapCharts /> */}
       </ div>
     </ div>
   );

@@ -1,18 +1,18 @@
 import React from "react";
-import "./Charts.css";
+import { ChartsHolder, ChartsTitle, ChartTypeHolder, Chart } from "./styles";
 
 const Charts = ({ chartName, children }) => (
-    < div className="charts" >
-        <h2 className="chartTitle">{chartName}</h2>
-        < div className="typeChart">
+    <ChartsHolder>
+        <ChartsTitle>{chartName}</ChartsTitle>
+        <ChartTypeHolder>
             {React.Children && React.Children.map(children, child =>
-                < div className="chart">
+                <Chart>
                     <p>{child.props.title}</p>
                     {child}
-                </div >
+                </Chart>
             )}
-        </div >
-    </div >
+        </ChartTypeHolder>
+    </ChartsHolder>
 );
 
 export default Charts;

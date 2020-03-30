@@ -49,8 +49,8 @@ const MapChart = () => {
                 domain={[100, 550000]}
                 unknownColor="rgba(0,0,0,0.1)"
                 label="properties.name"
-                valueFormat=".1s"
-                tooltip={(e) => seeTooltip(e, mapData2)}
+                valueFormat=".2s"
+                // tooltip={(e) => seeTooltip(e, mapData2)}
                 projectionTranslation={[0.3, 1.5]}
                 projectionScale={250}
                 enableGraticule={false}
