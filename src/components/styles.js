@@ -10,8 +10,8 @@ export const ChartsHolder = styled.div`
     margin: 5rem 0;
     border: 0.2rem solid rgb(66, 127, 184);
     font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-    width: 80%;
-    z-index: -1;
+    width: 100rem;
+    z-index: 5;
     &:hover h2{
         margin-top: -0.3rem;
         padding: 1rem;
